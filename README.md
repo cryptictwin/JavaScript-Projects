@@ -36,3 +36,17 @@ let message = age >= 18 ? "You're and adult" : "You're a minor";
 Boolean example
 let isStudent = false;
 let message = isStudent ? "You are a student" : "You are NOT a student";
+
+SWITCH = can be an efficient replacement to many 'else if' statements
+let day = 1
+
+switch(day) {
+    case 1
+        code
+        break:
+    case 2
+        code
+        break:
+    ...
+}
+have break: statements after each case so once a case is true, it breaks out of the switch, rather than executing every line of code the comes after
