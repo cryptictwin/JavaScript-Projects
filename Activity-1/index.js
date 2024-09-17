@@ -74,13 +74,82 @@
 // circumference = 2 * pi * radius;
 // console.log(circumference);
 
-const pi = 3.14159;
-let radius;
-let circumference = 2 * pi * radius;
+// const pi = 3.14159;
+// let radius;
+// let circumference = 2 * pi * radius;
 
-document.getElementById('mySubmit').onclick = function() {
-    radius = document.getElementById("myText").value;
-    radius = Number(radius);
-    let circumference = 2 * pi * radius;
-    document.getElementById("myH3").textContent = `Circumference for a circle with a radius of ${radius}cm is ${circumference} cm`;
+// document.getElementById('mySubmit').onclick = function() {
+//     radius = document.getElementById("myText").value;
+//     radius = Number(radius);
+//     let circumference = 2 * pi * radius;
+//     document.getElementById("myH3").textContent = `Circumference for a circle with a radius of ${radius}cm is ${circumference} cm`;
+// }
+
+
+
+
+// let age = 25;
+
+// if(age >= 18) {
+//     console.log("You are old enough to enter this site");
+// }
+// else {
+//     console.log("You are not old enough")
+// }
+
+
+// let age = 25;
+// let hasLicense = true;
+
+// if(age >= 16) {
+//     console.log("You are old enough to drive");
+//     if(hasLicense) {
+//         console.log("You have your lisence")
+//     }
+//     else {
+//         console.log("You do not have your lisence yet!")
+//     }
+// }
+// else {
+//     console.log("You must be 16+ to have a lisence")
+// }
+
+
+// let age = -1
+
+// if(age >= 18) {
+//     console.log("You are old enough to enter this site")
+// }
+// else if(age  < 0) {
+//     console.log("Your age can't be less below zero")
+// }
+// else {
+//     console.log("You must be 18+ to enter this site")
+// }
+
+
+const myText = document.getElementById("myText");
+const mySubmit = document.getElementById("mySubmit");
+const result = document.getElementById("result");
+
+let age;
+
+mySubmit.onclick = function() {
+    age = myText.value;
+    age = Number(age);
+    if (isNaN(age)) {
+        result.textContent = "This is not a valid number"
+    }
+    else if(age > 100) {
+        result.textContent = "You are TOO OLD to enter this website"
+    }
+    else if(age >= 18) {
+        result.textContent = "You are old enough to enter this website"
+    }
+    else if(age == 0) {
+        result.textContent = "You were just born"
+    }
+    else {
+        result.textContent = "You must be 18+ to enter this website"
+    }
 }
