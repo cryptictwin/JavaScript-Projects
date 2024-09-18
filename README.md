@@ -168,3 +168,44 @@ for(let i = 1; i <= 20; i++) {        ---- i is a common naming convention for a
         console.log(i);
     }
 }
+
+
+
+
+
+
+
+// function = A section of reusable code.
+              Declare code once, use it whenever you want.
+              Call the function to execute that code.
+
+// If you want to send you function some data, you'll need a matching set of parameters and arguments
+
+e.g function add(x, y) {
+    return x + y;              ---- Returns the value of x + y
+}
+let answer = add(40, 60);      ---- calling the add function and giving two arguments, pairing with the paremeters set by the function
+console.log(answer);           ---- = 100 
+
+
+
+
+
+
+
+
+// ---- variable scope = where a variable is recognized and accessible (local vs global)
+
+let x = 1   ---- These variables are declared outside of a function so are global. 
+let x = 2   ---- x cannot be reused in this scope so this is illegal
+
+
+function function1() {
+    let x = 1;
+    console.log(x);
+}
+                                ---- Here we have two variables with the same name (x). This is allowed as they have different scopes.
+function function2() {          ---- variables inside a function cannot see other variables inside other functions.
+    let x = 2;                  ---- Any variable declared inside of a function (or a set of {}) has a local scope
+    console.log(x);
+}

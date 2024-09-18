@@ -1,0 +1,45 @@
+* {
+    font-family: sans-serif;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: aliceblue;
+    border-radius: 20px;
+}
+
+#textBox {
+    width: 60%;
+    margin: 0px auto;
+    height: 50px;
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+input[type="radio"] {
+    margin-left: 20%;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+button {
+    margin-top: 30px;
+    width: 20%;
+    padding: 10px;
+    font-size: 1.5em;
+    border-radius: 10%;
+}
+
+p {
+    align-self: flex-end;
+    width: 70%;
+    font-weight: bold;
+    font-size: 1.5em;
+}
