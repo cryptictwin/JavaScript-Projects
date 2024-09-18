@@ -184,7 +184,7 @@ for(let i = 1; i <= 20; i++) {        ---- i is a common naming convention for a
 e.g function add(x, y) {
     return x + y;              ---- Returns the value of x + y
 }
-let answer = add(40, 60);      ---- calling the add function and giving two arguments, pairing with the paremeters set by the function
+let answer = add(40, 60);      ---- Invoking the add function and giving two arguments, pairing with the paremeters set by the function
 console.log(answer);           ---- = 100 
 
 
@@ -209,3 +209,37 @@ function function2() {          ---- variables inside a function cannot see othe
     let x = 2;                  ---- Any variable declared inside of a function (or a set of {}) has a local scope
     console.log(x);
 }
+
+
+
+
+
+
+
+// ---- array a variable like structure that can hold more than 1 value
+
+
+
+
+
+
+
+
+// ---- spread operator = ... allows and iterable such as an array 
+                          or string to be expanded into seperate elements
+                          (unpacks the elements)
+
+
+
+
+
+
+
+
+/// ---- rest parameters = (...rest) allow a function to work with a variable
+                           number of arguments by bundling them into an array
+    (very similiar to
+    spread operators)      spread = expands an array into seperate elements
+                           rest = bundles seperate elements into an array 
+
+e.g.
