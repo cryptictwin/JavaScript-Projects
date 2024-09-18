@@ -127,29 +127,17 @@
 //     console.log("You must be 18+ to enter this site")
 // }
 
+let username = window.prompt("Enter your username");
 
-const myText = document.getElementById("myText");
-const mySubmit = document.getElementById("mySubmit");
-const result = document.getElementById("result");
+// ----- NO METHOD CHAINING -----
+// username = username.trim();
+// let letter = username.charAt(0);
+// letter = letter.toUpperCase();
 
-let age;
+// let extraChars = username.slice(1);
+// extraChars = extraChars.toLowerCase();
+// username = letter + extraChars;
 
-mySubmit.onclick = function() {
-    age = myText.value;
-    age = Number(age);
-    if (isNaN(age)) {
-        result.textContent = "This is not a valid number"
-    }
-    else if(age > 100) {
-        result.textContent = "You are TOO OLD to enter this website"
-    }
-    else if(age >= 18) {
-        result.textContent = "You are old enough to enter this website"
-    }
-    else if(age == 0) {
-        result.textContent = "You were just born"
-    }
-    else {
-        result.textContent = "You must be 18+ to enter this website"
-    }
-}
+// ----- METHOD CHAINING -----
+username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
+console.log(username);
