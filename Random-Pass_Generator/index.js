@@ -8,6 +8,8 @@ function generatePassword(length, includeLowercase, includeUppercase, includeNum
     let allowedChars = "";
     let password = "";
 
+    // ternary operator, if the includeLowercase variable is true, the lowercase variable is added to the allowedChars variable
+    // the succeeding lines of code work the same way with their respected variables.
     allowedChars += includeLowercase ? lowercase : "";
     allowedChars += includeUppercase ? uppercase : "";
     allowedChars += includeNumbers ? numbers : "";
@@ -30,34 +32,30 @@ function generatePassword(length, includeLowercase, includeUppercase, includeNum
 }
 
 function applyChangesAndGeneratePassword() {
+
+    // .checked property sets the const to true or false, depending on whether the checkbox is selected
     const passwordLength = Number(document.getElementById("textLength").value);
     const includeLowercase = document.getElementById("lowercaseChar").checked;
     const includeUppercase = document.getElementById("uppercaseChar").checked;
     const includeNumbers = document.getElementById("numberChar").checked;
     const includeSymbols = document.getElementById("symbolChar").checked;
 
-    const password = generatePassword(passwordLength,       // Gives a variable the value of password from the function
+    const password = generatePassword(passwordLength,       // Gives a variable the value of the generatePassword function
                                         includeLowercase,
                                         includeUppercase,
                                         includeNumbers,
                                         includeSymbols,);
     
+        // finds the HTML element with ID "result" and changes the content to the succeeding string
     document.getElementById("result").textContent = `Password: ${password}`;                                    
 }
 
+// Applies an event listener to the HTML element with the ID "generateButton".
+// The first parameter is the type of event, in this case when the user clicks the element
+// The second parameter is the function that is called when the event occurs.
 document.getElementById("generateButton").addEventListener("click", applyChangesAndGeneratePassword);
 
 
 
-
-
-
-
-
-const password = generatePassword(passwordLength,       // Gives a variable the value of password from the function
-                                  includeLowercase,
-                                  includeUppercase,
-                                  includeNumbers,
-                                  includeSymbols,);
 
 
