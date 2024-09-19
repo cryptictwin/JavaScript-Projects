@@ -216,7 +216,40 @@ function function2() {          ---- variables inside a function cannot see othe
 
 
 
+
+
+
 // ---- array a variable like structure that can hold more than 1 value
+e.g.
+let fruits = ["apple", "orange", "banana"]
+
+console.log(fruits[0]) // "apple"
+console.log(fruits[1]) // "orange"
+console.log(fruits[2]) // "banana"
+console.log(fruits[3]) // undefined
+
+fruits.push("coconut");  // ["apple", "orange", "banana", "coconut"]    ---- Pushes an element to the end
+fruits.pop()             // ["apple", "orange", "banana"]               ---- Removes the last element
+fruits.unshift("mango")  // ["mango", "apple", "orange", "banana"]      ---- Add an element to the beginning
+fruits.shift()           // ["apple", "orange", "banana"]               ---- Removes an element from the beginnning
+
+let numOfFruits = fruits.length         ---- Gets the length of an array
+console.log(numOfFruits)  // 3
+
+let index = fruits.indexOf("apple")     ---- Finds the index of a specified element
+console.log(index)   // 0
+let index = fruits.indexOf("watermelon") 
+console.log(index)   // -1              ---- Returns -1 as element doesn't exist inside the fruits array
+
+for (let i = 0; i < fruits.length; i++) {
+    console.log(fruits[i])                  // apple orange banana
+}
+
+---- ENHANCED FOR LOOP FOR DISPLAYING THE ELEMENTS OF AN ARRAY ----
+for (let fruit of fruits) {
+    console.log(fruit)             ---- Shortcut alternative to the for loop above for displaying the elements of an array
+}                                  ---- fruit will display each element of the array in order on each iteration of the loop
+
 
 
 
@@ -236,6 +269,9 @@ function function2() {          ---- variables inside a function cannot see othe
 
 
 
+
+
+
 /// ---- rest parameters = (...rest) allow a function to work with a variable
                            number of arguments by bundling them into an array
     (very similiar to
@@ -243,3 +279,16 @@ function function2() {          ---- variables inside a function cannot see othe
                            rest = bundles seperate elements into an array 
 
 e.g.
+
+function openFridge(...foods) {
+    console.log(foods);
+}
+
+const food1 = "pizza";
+const food2 = "hamburger";
+const food3 = "hotdog";
+const food4 = "sushi";
+
+---- With the rest parameter for the function, you can send the function any number of arguments you like. Grouping the ---- elements into an array
+
+openFridge(food1, food2, food3, food4);     	// ["pizza", "hamburger", "hotdog", "sushi"]

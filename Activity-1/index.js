@@ -127,7 +127,7 @@
 //     console.log("You must be 18+ to enter this site")
 // }
 
-let username = window.prompt("Enter your username");
+
 
 // ----- NO METHOD CHAINING -----
 // username = username.trim();
@@ -138,6 +138,8 @@ let username = window.prompt("Enter your username");
 // extraChars = extraChars.toLowerCase();
 // username = letter + extraChars;
 
-// ----- METHOD CHAINING -----
-username = username.trim().charAt(0).toUpperCase() + username.trim().slice(1).toLowerCase();
-console.log(username);
+let fruits = ["apple", "orange", "banana"];
+
+fruits.push("coconut");
+fruits.pop();
+console.log(fruits);

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <h1>Random Password Generator</h1>
+        <label for="textLength">Character Length: </label>
+        <input type="number" id="textLength" value="0"> <br> <br>
+        <div>
+            <label for="lowercaseChar">Lowercase</label>
+            <input type="checkbox" id="lowercaseChar"> <br>
+
+            <label for="uppercaseChar">Uppercase</label>
+            <input type="checkbox" id="uppercaseChar"> <br>
+
+            <label for="numberChar">Numbers</label>
+            <input type="checkbox" id="numberChar"> <br>
+
+            <label for="symbolChar">Symbols</label>
+            <input type="checkbox" id="symbolChar"> <br><br>
+        </div>
+    
+        <button type="button" id="generateButton">Generate</button>
+        <p id="result"></p>
+    </form>
+</body><script src="index.js"></script>
+</html>
