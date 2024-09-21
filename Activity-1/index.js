@@ -138,8 +138,15 @@
 // extraChars = extraChars.toLowerCase();
 // username = letter + extraChars;
 
-let fruits = ["apple", "orange", "banana"];
+let fruits = ["apple", "orange", "banana", "coconut"]
 
-fruits.push("coconut");
-fruits.pop();
+fruits.forEach(upperCase);
 console.log(fruits);
+
+function upperCase(element, index, array) {
+    array[index] = element.toUpperCase();
+}
+
+function display(element) {
+    console.log(element);
+}

@@ -21,19 +21,19 @@ function generatePassword(length, includeLowercase, includeUppercase, includeNum
     }                                                          // returns a value
 
     if(allowedChars.length === 0) {
-        return "You must select atleast 1 set of characters ";
+        return "You must select atleast 1 set of characters "; // This returns when no sets of characters have been selected
     }
 
     for(i = 0; i < length; i++) {
         const indexOfChar = Math.floor(Math.random() * allowedChars.length);  // Generates a random number from a range 
         password += allowedChars[indexOfChar];                                // determined by the length of the allowedChars 
     }                                                                         // string length
-    return password;
+    return password; // Returns the value of password after the function has been executed
 }
 
 function applyChangesAndGeneratePassword() {
 
-    // .checked property sets the const to true or false, depending on whether the checkbox is selected
+    // .checked property sets the const to true or false, depending on whether the checkbox has been selected
     const passwordLength = Number(document.getElementById("textLength").value);
     const includeLowercase = document.getElementById("lowercaseChar").checked;
     const includeUppercase = document.getElementById("uppercaseChar").checked;

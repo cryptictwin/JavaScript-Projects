@@ -177,6 +177,7 @@ for(let i = 1; i <= 20; i++) {        ---- i is a common naming convention for a
 
 // function = A section of reusable code.
               Declare code once, use it whenever you want.
+              Can call the function even before its declaration
               Call the function to execute that code.
 
 // If you want to send you function some data, you'll need a matching set of parameters and arguments
@@ -185,6 +186,7 @@ e.g function add(x, y) {
     return x + y;              ---- Returns the value of x + y
 }
 let answer = add(40, 60);      ---- Invoking the add function and giving two arguments, pairing with the paremeters set by the function
+
 console.log(answer);           ---- = 100 
 
 
@@ -217,7 +219,7 @@ function function2() {          ---- variables inside a function cannot see othe
 
 
 
-
+ #### ARRAYS ####
 
 // ---- array a variable like structure that can hold more than 1 value
 e.g.
@@ -229,6 +231,8 @@ console.log(fruits[2]) // "banana"
 console.log(fruits[3]) // undefined
 
 fruits.push("coconut");  // ["apple", "orange", "banana", "coconut"]    ---- Pushes an element to the end
+// let pushed = fruits.push("coconut"); pushed = 4 now, .push() method returns the new length of the array
+
 fruits.pop()             // ["apple", "orange", "banana"]               ---- Removes the last element
 fruits.unshift("mango")  // ["mango", "apple", "orange", "banana"]      ---- Add an element to the beginning
 fruits.shift()           // ["apple", "orange", "banana"]               ---- Removes an element from the beginnning
@@ -289,6 +293,135 @@ const food2 = "hamburger";
 const food3 = "hotdog";
 const food4 = "sushi";
 
----- With the rest parameter for the function, you can send the function any number of arguments you like. Grouping the ---- elements into an array
+---- With the rest parameter for the function, you can send the function any number of arguments you like. 
+---- Grouping the elements into an array
 
 openFridge(food1, food2, food3, food4);     	// ["pizza", "hamburger", "hotdog", "sushi"]
+
+
+
+
+
+
+
+
+
+
+
+// callback = a function that is passed as an argument to another function
+// used to handle asynchronous operations :
+                        1. reading a file
+                        2. Network requests
+                        3. Interacting with a database
+
+                        "Hey, when you're done, call this next"
+
+
+
+
+
+
+
+
+
+#### ARRAY METHODS ####
+
+// forEach() = method used to iterate over the elements of an array
+// and apply a specific function (callback) to each element
+
+//                                              array.forEach(callback)
+                                                element, index, array are provided with a forEach() method
+// Useful to apply a function to each element of an array
+e.g.
+let fruits = ["apple", "orange", "banana", "coconut"]
+
+fruits.forEach(upperCase);
+fruits.forEach(display);
+
+function upperCase(element, index, array) {
+    array[index] = element.toUpperCase();
+}
+
+function display(element) {
+    console.log(element);
+}
+
+
+
+
+
+
+// .map() = accepts a callback and applies that function to each element of an array,
+//          then returns a new array while maintaining the original array
+// Similiar to the .forEach() method, but key difference is the new array part that 
+
+// .forEach() - will change the elements of the original array
+// .map() - returns a new array while still having the original array
+
+e.g.
+const numbers = [1, 2, 3, 4, 5];
+const squares = numbers.map(square);
+const cubes = numbers.map(cube);
+
+console.log(numbers); // still returns [1, 2, 3, 4, 5]
+
+function square(element) {
+    return Math.pow(element, 2)
+}
+
+function square(element) {
+    return Math.pow(element, 3)
+}
+
+
+
+
+
+
+
+
+// .filter() 
+
+
+
+
+
+
+
+
+#### FUNCTION EXPRESSIONS ####
+// function expression = A way to define functioons as values or variables
+                         - Instead of using function declarations then passing a 
+                           callback, we can pass an entire function expression DIRECTLY as 
+                           an argument to the methods discussed earlier (.map, .filter, .reduce ...)
+
+// Function expressions are available only after the expression is made
+// Can be anonymous(without name) or named, which is good to if you want to perform functions just once and then forget about it
+// 
+
+Lets compare the two...
+
+# FUNCTION DECLARATION #
+function hello() {
+    conslole.log("hello");
+}
+
+hello(); // returns "hello"
+
+# FUNCTION EXPRESSION TO A VARIABLE #              # FUNCTION EXPRESSION AS A VALUE (Not named or stored) #
+const hello = function() {                         setTimeout.(function() { 
+    console.log("hello");                              console.log("Function as a value);
+}                                                  }, 1000) 
+
+hello(); // returns "hello"
+
+
+
+
+
+
+
+
+
+
+
